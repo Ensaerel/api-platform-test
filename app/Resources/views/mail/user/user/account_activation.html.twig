@@ -1,0 +1,12 @@
+{% extends 'mail/base.html.twig' %}
+
+{% block body %}
+    <h1>Thank you for your registration</h1>
+    <p>
+        Hello {{ user.username }},
+        <br/><br/>
+        Congrats, your account has been successfully created !
+        <br/><br/>
+        Thank you !
+    </p>
+{% endblock body %}

@@ -1,0 +1,14 @@
+parameters:
+    database_host: api-platform-test_mysql
+    database_port: null
+    database_name: api_platform_test
+    database_user: api_platform_test
+    database_password: api_platform_test
+    mailer_transport: smtp
+    mailer_host: api-platform-test_mailcatcher
+    mailer_user: null
+    mailer_password: null
+    mailer_port: 1025
+    secret: ThisTokenIsNotSoSecretChangeIt
+    cors_allow_origin: '*'
+    redis_host: api-platform-test_redis

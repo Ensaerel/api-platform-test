@@ -1,0 +1,27 @@
+imports:
+    - { resource: config.yml }
+
+snc_redis:
+    doctrine:
+        metadata_cache:
+            client: sf_cache
+            entity_manager: default          # the name of your entity_manager connection
+        result_cache:
+            client: sf_cache
+            entity_manager: [default]        # you may specify multiple entity_managers
+        query_cache:
+            client: sf_cache
+            entity_manager: default
+
+monolog:
+    handlers:
+        main:
+            type:         fingers_crossed
+            action_level: error
+            handler:      nested
+        nested:
+            type:  stream
+            path:  "%kernel.logs_dir%/%kernel.environment%.log"
+            level: debug
+        console:
+            type:  console
